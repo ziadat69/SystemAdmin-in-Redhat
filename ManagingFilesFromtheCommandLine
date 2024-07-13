@@ -1,0 +1,89 @@
+
+
+
+
+1) Create two empty files in the ~/Documents/project_plans directory: season1_project_plan.odf and season2_project_plan.odf.
+      ==>>> [ziadat69@ahmadziadat ~]$ mkdir -p Documents/project_plans ; touch Documents/project_plans/season1_project_plan.odf \
+                                     > Documents/project_plans/season2_project_plan.odf 
+
+2) Create a total of 12 files with names tv_seasonX_episodeY.ogg.
+   Replace X with the season number and Y with that season's episode, for two seasons of six episodes each.
+    ==>>> [ziadat69@ahmadziadat project_plans]$ touch tv_season{1..2}_episode{1..6}.ogg
+
+3)  Create a total of eight files with names mystery_chapterX.odf. Replace X with the numbers 1 through 8.
+    ==>>> [ziadat69@ahmadziadat project_plans]$ touch mystery_chapter{1..8}.odf
+
+4) Use a single command to create two subdirectories named season1 and season2 under the Videos directory, to organize the TV episodes.
+         ==>>> [ziadat69@ahmadziadat project_plans]$ mkdir -p Videos/season{1..2}
+
+5) Move the appropriate TV episodes into the season subdirectories. Use only two commands, specifying destinations using relative syntax.
+         ==>>> [ziadat69@ahmadziadat project_plans]$ mv tv_season1* Videos/season1 ;   mv tv_season2* Videos/season2 
+
+6) Create my_bestseller under the Documents directory, and chapters under the new my_bestseller directory.
+       ==>>> [ziadat69@ahmadziadat ~]$ mkdir -p Documents/my_bestseller/chapters
+
+7) Create three more subdirectories directly under the my_bestseller directory using a single command. Name editor, changes, and vacation
+           ==>>> [ziadat69@ahmadziadat ~]$ mkdir -p Documents/my_bestseller/chapters
+
+8) Change to the chapters directory. Using the tilde (~) home directory shortcut to specify the source files, 
+   move all book chapters to the chapters directory, which is now your current directory.
+        ==>>> [ziadat69@ahmadziadat ~]$ cd Documents/my_bestseller/chapters
+        ==>>> [ziadat69@ahmadziadat chapters]$   mv ~/Documents/project_plans/mystery_chapter*  /home/ziadat69/Documents/my_bestseller/chapters
+
+9) Move mystery_chapter 1 2 only to the editor directory to avoid modifying them during the review. Starting from the chapters
+          ==>>> [ziadat69@ahmadziadat chapters]$  mv mystery_chapter{1..2}.odf ../editor
+
+10) Use a single command to move the files from the chapters directory to the vacation directory. 
+               ==>>>  [ziadat69@ahmadziadat chapters]$ mv mystery_chapter{7,8}.odf ../vacation
+
+11) Change your working directory to ~/Videos/season2, and then copy the first episode of the season to the vacation directory.
+           ==>>>  [ziadat69@ahmadziadat chapters]$ cd /home/ziadat69/Documents/project_plans/Videos/season2
+           ==>>>  [ziadat69@ahmadziadat season2]$ cp *episode1.ogg ~/Documents/my_bestseller/vacation
+
+12) Use a single cd command to change from your working directory to the ~/Documents/ my_bestseller/vacation director .List its files.
+    Use the previous working directory argument to return to the season2 directory. 
+
+         ==>>> [ziadat69@ahmadziadat ~]$ cd ~/Documents/my_bestseller/vacation ; ls
+         ==>>> [ziadat69@ahmadziadat vacation]$ cd -
+
+13 ) Change your current directory to the changes directory.
+     Use the date +%F command with command substitution to copy mystery_chapter5.odf to a new file which includes the full date.
+    The name should have the form mystery_chapter5_YYYY-MM-DD.odf.
+
+         ==>>> [ziadat69@ahmadziadat ~]$ cd Documents/my_bestseller/changes/
+         ===>>> [ziadat69@ahmadziadat changes]$ cp mystery_chapter5.odf  mystery_chapter5_$(date +%F).odf
+
+14)  Delete the changes directory.
+        ===>>> [ziadat69@ahmadziadat changes]$ cd ..
+        ==> [ziadat69@ahmadziadat my_bestseller]$ rm -r changes/
+
+15) Delete the humanfile file.
+         ==>  [ziadat69@ahmadziadat ~]$ rm filehuman 
+
+16) Create a hard link to the ~/Documents/project_plans/season2_project_plan.odf file named ~/Documents/backups/season2_project_plan.odf.back
+  
+               ==> [ziadat69@ahmadziadat Documents]$ mkdir hardlink
+               ==> [ziadat69@ahmadziadat Documents]$ ln ~/Documents/project_plans/season2_project_plan.odf \
+                                                   > ~/Documents/hardlink/season2_project_plan.odf.bac
+          
+         
+         
+
+
+                              
+           
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
