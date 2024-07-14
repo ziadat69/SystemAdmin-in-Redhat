@@ -1,0 +1,21 @@
+View detailed information about a unit state. ==> View detailed information about a unit state.
+
+Stop a service on a running system. ==> systemctl stop UNIT
+
+Start a service on a running system. ==> systemctl start UNIT
+
+Restart a service on a running system. ==> systemctl restart UNIT
+
+Reload the configuration file of a running service. ==> systemctl reload UNIT
+
+Completely disable a service from being started, both manually and at boot. ==> systemctl mask UNIT
+
+Make a masked service available. ==> systemctl unmask UNIT
+
+Configure a service to start at boot time. ==> systemctl enable UNIT
+
+Disable a service from starting at boot time. ==> systemctl disable UNIT
+
+List units required and wanted by the specified unit. ==> systemctl list-dependencies UNIT 
+
+
