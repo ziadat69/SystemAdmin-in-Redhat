@@ -1,0 +1,24 @@
+1) On workstation, determine how to prepare a man page for printing. Specifically, find what format or rendering language is used for printing. 
+          ==>> man man
+
+2) Create a formatted output file of the passwd man page. Call the file passwd.ps. Determine the file content format. 
+   Inspect the contents of the passwd.ps file.
+                      ==>>      man -t passwd > passwd.ps
+
+3) Use the file command to determine the file content format.
+                ==>>  file /home/student/passwd.ps
+
+4) Use the less command to view the /home/student/passwd.ps file.
+         ==> less /home/student/passwd.ps
+
+5)  Learn how to use the evince(1) viewer in preview mode. Also, determine how to open a document starting on a specific page. 
+               ==>  man evince
+
+6) Use the man to determine how to print specific pages of a document.
+         ==>>  man lp
+
+7) Using pinfo, look for GNU Info documentation about the evince viewer.
+         ==>  pinfo evince
+
+8) Using Firefox, open the system's package documentation directory and browse into the man- db package subdirectory. View the provided manuals.
+        ===>  firefox /usr/share/doc
