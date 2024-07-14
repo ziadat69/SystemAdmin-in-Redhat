@@ -1,0 +1,23 @@
+1) ensure that newly created users have passwords that must be changed every 30 days.
+
+    ===> sudo vim /etc/login.defs
+    ===> set PASS_MAX_DAYS to 30 
+
+2) Create the new group consultants with a GID of 40000.
+
+      ===> sudo groupadd -g 40000 consultants
+
+3) Create the consultant1, consultant2, and consultant3 users with consultants as their supplementary group.
+   
+      ==> sudo useradd -G consultants consultant1
+
+4) The three critical files containing user and group information are /etc/passwd, /etc/group, and /etc/shadow.
+
+5) The su and sudo commands can be used to run commands as the superuser.
+
+6) The useradd, usermod, and userdel commands can be used to manage users.
+
+7) The chage command can be used to configure and view password expiration settings for users.
+
+8) The groupadd, groupmod, and groupdel commands can be used to manage groups.
+
