@@ -30,6 +30,13 @@
   - Create, modify, and delete locally defined user accounts.
   - Create, modify, and delete locally defined group accounts.
   - Set a password management policy for users, and manually lock and unlock user accounts.
+# 6) Controlling Access to Files
+   Set Linux file-system permissions on files and to interpret the security effects of different permission settings.
+  - List the file system permissions on files and directories, and interpret the effect of those permissions on access by users and groups.
+  - Change the permissions and ownership of files using command-line tools.
+  - Control the default permissions of new files created by users, explain the effect of special permissions, and use special permissions and default permissions to set
+  -  the group owner of files created in a particular directory.
+    
 
 
 
