@@ -42,6 +42,10 @@
   - Use Bash job control to manage multiple processes started from the same terminal session.
   - Control and terminate processes that are not associated with your shell, and forcibly end user sessions and processes.
   - Describe what load average is and determine processes responsible for high resource use on a server.
+# 8) Controlling Services and Daemons
+   Control and monitor network services and system daemons using Systemd.
+   - List system daemons and network services started by the systemd service and socket units.
+   - Control system daemons and network services, using systemctl.
     
 
 
