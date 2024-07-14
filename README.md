@@ -11,7 +11,16 @@
  - Create, copy, move, and remove files and directories.
  - Make multiple file names reference the same file using hard links and symbolic (or "soft") links.
  - Efficiently run commands affecting many files by using pattern matching features of the Bash shell.
-
-
+# 3)Getting Help in Red Hat Enterprise Linux
+  - Reading Manual Pages
+  - Resolve problems by using local help systems.
+  - Find information in local Linux system manual pages.
+  - Find information from local documentation Info.
+# 4) Creating, Viewing, and Editing Text Files
+   Create, view, and edit text files from command output or in a text editor.
+   - Save command output or errors to a file with shell redirection, and process command output through multiple command-line programs with pipes.
+   - Create and edit text files using the vim editor.
+   - Use shell variables to help run commands, and edit Bash startup scripts to set shell and
+     environment variables to modify the behavior of the shell and programs run from the shell.
 
 
