@@ -36,7 +36,7 @@
   - Change the permissions and ownership of files using command-line tools.
   - Control the default permissions of new files created by users, explain the effect of special permissions, and use special permissions and default permissions to set
   -  the group owner of files created in a particular directory.
-# 7)
+# 7) Monitoring and Managing Linux Processes
    Evaluate and control processes running on a Red Hat Enterprise Linux system.
   - Get information about programs running on the system so that you can determine status, resource use, and ownership, so you can control them.
   - Use Bash job control to manage multiple processes started from the same terminal session.
