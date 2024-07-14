@@ -1,0 +1,26 @@
+1) Redirect a long listing of all content in the student's home directory, including hidden directories and files, into a file named editing_final_lab.txt.
+
+        ===> cd 
+        ===> ls -al > editing_final_lab.txt
+
+2) Edit the file using Vim.
+
+         ==> vim editing_final_lab.txt
+
+3) Remove the first three lines. Enter line-based visual mode with uppercase V.
+
+     ==> Shift+V ==> down arrow key  ==> x
+
+4)  Use the :wq command to save and exit the file. Make a backup, using the date (in seconds) to
+    create a unique file name.
+
+      ==> Exit key ==> wq 
+      ===> editing_final_lab_$(date +%s).txt
+
+5)   Append a directory listing of the Documents directory. List the directory listing on the terminal and send it to the editing_final_lab.txt file with one command line.
+
+        ===> ls Documents/ | tee -a editing_final_lab.txt
+
+6) Confirm that the directory listing is at the bottom of the lab file.
+      ===>   cat editing_final_lab.txt
+     
