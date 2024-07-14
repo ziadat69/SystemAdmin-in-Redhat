@@ -1,0 +1,36 @@
+1) Create a directory called /home/techdocs.
+   ==> mkdir /home/techdocs
+
+2) Change the group ownership of the /home/techdocs directory to the techdocs group.
+   ==> [root@ahmadziadat ziadat69]# groupadd techdocs
+   ==> [root@ahmadziadat ziadat69]# chown :techdocs home/techdocs
+
+3) Use the touch create a file named techdoc1.txt in the /home/techdocs directory.
+
+     ==> [root@ahmadziadat ziadat69]# touch home/techdocs/techdoc1.txt 
+
+4) Use the chmod command to set the group permission for the /home/techdocs directory. On the /home/techdocs directory, configure setgid (2),
+  read/write/ execute permissions (7) for the owner/user and group, and no permissions (0) for other users.
+
+    ==>  [root@ahmadziadat ziadat69]#  chmod 2770 home/techdocs
+
+5)Modify the global login scripts. Normal users should have a umask setting that prevents others from viewing or modifying new files and directories.
+
+    ==>   [root@ahmadziadat ziadat69]# umask
+
+6) Create a file /etc/profile.d/local-umask.sh with the following content to set the umask to 007 for users with a UID greater than 199 and with a
+    username and primary group name that match, and to 022 for everyone else:
+
+   if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+    umask 007
+    else
+    umask 022 fi
+
+
+• Files have three categories to which permissions apply. A file is owned by a user, a single group, and other users. The most specific permission applies.
+  User permissions override group permissions and group permissions override other permissions.
+• The ls command with the -l option expands the file listing to include both the file permissions and ownership.
+• The chmod command changes file permissions from the command line. There are two methods to represent permissions, symbolic (letters) and numeric (digits).
+• The chown command changes file ownership. The -R option recursively changes the ownership of a directory tree.
+• The umask command without arguments displays the current umask value of the shell.
+  Every process on the system has a umask. The default umask values for Bash are defined in the /etc/ profile and /etc/bashrc files.
