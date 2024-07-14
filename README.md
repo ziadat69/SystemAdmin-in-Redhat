@@ -7,7 +7,7 @@
 # 2)Managing Files From the Command Line
  - Copy, move, create, delete, and organize files while working from the Bash shell.
  - Describe how Linux organizes files, and the purposes of various directories in the file-system hierarchy.
- - Specify the location of files relative to the current working directory and by absolute location, determine and change your working directory, and    list the contents of directories.
+ - Specify the location of files relative to the current working directory and by absolute location, determine and change your working directory, and    list the contents of     directories.
  - Create, copy, move, and remove files and directories.
  - Make multiple file names reference the same file using hard links and symbolic (or "soft") links.
  - Efficiently run commands affecting many files by using pattern matching features of the Bash shell.
@@ -22,5 +22,14 @@
    - Create and edit text files using the vim editor.
    - Use shell variables to help run commands, and edit Bash startup scripts to set shell and
      environment variables to modify the behavior of the shell and programs run from the shell.
+# 5) Managing Local Users and Groups
+   Create, manage, and delete local users and groups and administer local password policies.
+  - Describe the purpose of users and groups on a Linux system\
+  - Switch to the superuser account to manage a Linux system, and grant other users superuser
+    access using the sudo command.
+  - Create, modify, and delete locally defined user accounts.
+  - Create, modify, and delete locally defined group accounts.
+  - Set a password management policy for users, and manually lock and unlock user accounts.
+
 
 
