@@ -46,7 +46,13 @@
    Control and monitor network services and system daemons using Systemd.
    - List system daemons and network services started by the systemd service and socket units.
    - Control system daemons and network services, using systemctl.
-    
+
+# 9) Configuring and Securing SSH
+   Configure secure command-line service on remote systems, using OpenSSH.
+   - Log in to a remote system and run commands using ssh.
+   - Configure key-based authentication for a user account to log in to remote systems securely
+     without a password.
+   - Restrict direct logins as root and disable password-based authentication for the OpenSSH service.
 
 
 
