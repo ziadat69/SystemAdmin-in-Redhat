@@ -1,0 +1,40 @@
+
+1) Create a script called process1, which will generate artificial CPU load. 
+
+     ===> vim process1
+          while true; do
+    echo "Generating artificial CPU load..."
+    # Perform a task that generates CPU load
+    # For example, calculate the sum of squares
+    for i in {1..100000}; do
+        echo "$i^2" | bc >/dev/null &
+    done
+    wait
+    sleep 1  # Adjust sleep duration as needed
+     done
+
+2) In the right window, run the top utility.
+    ==> top
+
+3) Start the process1 process in the background.
+   process1 &
+
+4) In the left terminal shell use the lscpu command to determine the number of logical CPUs on this virtual machine.
+         lscpu
+
+5) In the left terminal shell run the ps command with the jT to view the remaining jobs.
+  ==> ps jT
+
+
+
+
+• A process is a running instance of an executable program. Processes are assigned a state, which
+can be running, sleeping, stopped, or zombie. The ps command is used to list processes.
+• Each terminal is its own session and can have foreground process and independent background
+processes. The jobs command displays processes within a terminal session.
+• A signal is a software interrupt that reports events to an executing program. The kill, pkill,
+and killall commands use signals to control processes.
+• Load average is an estimate of how busy the system is. To display load average values, you can
+use the top, uptime, or w command.
+
+
