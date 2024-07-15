@@ -1,0 +1,27 @@
+1) Use the ssh-keygen command to generate passphrase-less SSH keys in server a
+
+  ==> ssh-keygen
+
+2) Use the ssh-copy-id command to send the public key of the SSH key pair 
+
+  ==> ssh-copy-id ziadat69@serverb
+
+3) Confirm that ziadat69 can successfully log in to serverb using the SSH keys.
+
+   ===> ssh ziadt69@serverb
+
+4) Set PermitRootLogin to no in /etc/ssh/sshd_config and reload sshd. You may use vim /etc/ssh/sshd_config to edit the configuration file of sshd.
+
+   ===> vim /etc/ssh/sshd_config 
+  
+      PasswordAuthentication no
+
+   ===> systemctl reload sshd
+
+ • The ssh command allows users to access remote systems securely using the SSH protocol.
+ • A client system stores remote servers' identities in ~/.ssh/known_hosts and /etc/ssh/ ssh_known_hosts.
+ • SSH supports both password-based and key-based authentication.
+ • The ssh-keygen command generates an SSH key pair for authentication. The ssh-copy-id command exports the public key to remote systems.
+ • The sshd service implements the SSH protocol on Red Hat Enterprise Linux systems.
+ • It is a recommended practice to configure sshd to disable remote logins as root and to require
+  public key authentication rather than password-based authentication.
