@@ -53,6 +53,14 @@
    - Configure key-based authentication for a user account to log in to remote systems securely
      without a password.
    - Restrict direct logins as root and disable password-based authentication for the OpenSSH service.
+     
+# 10) Managing Networking
+   Configure network interfaces and settings on Red Hat Enterprise Linux servers.
+  - Describe fundamental concepts of network addressing and routing for a server.
+  - Test and inspect current network configuration with command-line utilities.
+  - Manage network settings and devices using nmcli.
+  - Modify network settings by editing configuration files.
+  - Configure a server's static host name and its name resolution, and test the results.
 
 
 
