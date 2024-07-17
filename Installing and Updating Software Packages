@@ -1,0 +1,51 @@
+1) List installed and available packages by name
+   ==> yum list [NAME-PATTERN]
+
+2) List installed and available groups
+   ==> yum group list
+
+3) Search for a package by keyword
+   ==> yum search KEYWORD
+
+4) yum search KEYWORD
+   ==> yum info PACKAGENAME
+
+5) Install a package
+   ==> yum install PACKAGENAME
+
+6) Install a package group
+  ==> yum group install GROUPNAME
+
+7) Update all packages
+  ==> yum update
+
+8) Remove a package
+  ==> yum remove PACKAGENAME
+
+9) Display transaction history
+  ==> yum history
+
+10) Registering a system to the subscription management service automatically configures access to software repositories based on
+ the attached subscriptions. To view all available repositories:
+       ==> yum repolist all
+
+11) Create the file /etc/yum.repos.d/errata.repo with the following content: 
+    [updates]
+    name= example Updates
+    baseurl=http://content.example.com
+    enabled=1
+    gpgcheck=0
+
+12) List available modules and streams.
+    Look for the httpd module. Use the yum install command to install the httpd module with the 2.4 stream and the common profile.
+     ==> yum module list
+     ==>  yum module install httpd:2.4
+
+
+• Red Hat Subscription Management provides tools to entitle machines to product subscriptions, get updates to software packages, and track information about support contracts and subscriptions used by the systems.
+• Software is provided as RPM packages, which make it easy to install, upgrade, and uninstall software from the system.
+• The rpm command can be used to query a local database to provide information about the contents of installed packages and install downloaded package files.
+• yum is a powerful command-line tool that can be used to install, update, remove, and query software packages.
+• Red Hat Enterprise Linux 8 uses Application Streams to provide a single repository to host multiple versions of an application's packages and its dependencies.
+
+
