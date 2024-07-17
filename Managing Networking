@@ -1,0 +1,34 @@
+1) Determine the interface name and the current active connection's name. 
+    ==> ip link 
+
+2)Create the new lab connection profile based on the information in the table described in the instructions.
+
+   ==> nmcli con add con-name ziadat69 ifname ens3 type ethernet ip4 172.30.312.4/24 gw4 172.30.312.254
+   ==> nmcli con mod "lab" ipv4.dns 172.30.312.4
+
+3) Modify the new connection so that it also uses the address 10.0.1.1/24..
+    ==> nmcli con mod "ziadat69" +ipv4.addresses 10.0.1.1/24
+
+4) Configure the hosts file so that 10.0.1.1 can be referenced as private.
+   ==> echo "10.0.1.1 private" >> /etc/hosts
+
+5)  Display the current host name.
+   ==> hostname
+
+6)Bring up the connection with the new settings. 
+   ==> nmcli con up "ens3"
+
+7) Test connectivity using the new network addresses.
+   ping -c5 10.0.1.1
+
+
+
+• The TCP/IP network model is a simplified,
+four-layered set of abstractions that describes how different protocols interoperate in order for computers to send traffic from one machine to another over the Internet.
+• IPv4 is the primary network protocol used on the Internet today. IPv6 is intended as an eventual replacement for the IPv4 network protocol. 
+By default, 
+Red Hat Enterprise Linux operates in dual-stack mode, using both protocols in parallel.
+• NetworkManager is a daemon that monitors and manages network configuration.
+• The nmcli command is a command-line tool for configuring network settings with NetworkManager.
+• The system's static host name is stored in the /etc/hostname file. The hostnamectl command is used to modify or view the status of the system's host name and related settings. 
+The hostname command displays or temporarily modifies the system's host name.
