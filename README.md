@@ -77,4 +77,10 @@
  - Enable and disable use of Red Hat or third-party Yum repositories by a server.
  - Explain how modules allow installation of specific versions of software, list, enable, and switch module streams, and install and update packages     from a module.
 
+# 12) Archiving and Transferring Files Archive and copy files from one system to another.
+• Archive files and directories into a compressed file using tar, and extract the contents of an existing tar archive.
+• Transfer files to or from a remote system securely using SSH.
+• Synchronize the contents of a local file or directory with a copy on a remote server.
+
+
 
