@@ -83,5 +83,13 @@
 - Transfer files to or from a remote system securely using SSH.
 - Synchronize the contents of a local file or directory with a copy on a remote server.
 
+# 13) Analyzing and Storing Logs
+Locate and accurately interpret logs of system events for troubleshooting purposes.
+• Describe the basic logging architecture used by Red Hat Enterprise Linux to record events.
+• Interpret events in relevant syslog files to troubleshoot problems or review system status.
+• Find and interpret entries in the system journal to troubleshoot problems or review system status.
+• Configure the system journal to preserve the record of events when a server is rebooted.
+• Maintain accurate time synchronization using NTP and configure the time zone to ensure correct time stamps for events recorded by the system    journal and logs.
+
 
 
