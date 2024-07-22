@@ -1,0 +1,70 @@
+ 1) Create the /etc/rsyslog.d/debug.conf file with the necessary entries to redirect all log messages having the debug priority to /var/log/messages- debug.
+
+    ==> vim /etc/rsyslog.d/debug.conf
+          *.debug /var/log/messages-debug
+
+2) Restart the rsyslog service.
+
+    ==> systemctl restart rsyslog
+
+3)  Use the logger command with the -p option to generate a log message with the user facility and the debug priority.
+
+   ==> logger -p user.debug "Debug Message Test"
+
+4) Use the tail command to view the last ten log messages from the /var/log/ messages-debug file and confirm that you see the Debug Message Test message among the other log messages.
+
+   ==> tail /var/log/messages-debug
+
+5) To retrieve log messages from the journal, use the journalctl command
+
+    ==> journalctl
+
+6) By default, journalctl -n shows the last 10 log entries. You can adjust this with an optional argument that specifies how many log entries to display.
+   For the last five log entries, run the following journalctl command
+
+    ==> journalctl -n 5 
+
+7) Similar to the tail -f command, the journalctl -f command outputs the last 10 lines of the system journal and continues to output new journal entries as they get written to the journal.
+
+    ==> journalctl -f
+
+8)  Run the following journalctl command to list journal entries at the err priority or higher
+
+    ==> journalctl -p err
+
+9) we can also specify all entries since a time relative to the present. For example, to specify all entries in the last hour,
+
+   ==> journalctl --since "-1 hour"
+
+
+10 ) In addition to the visible content of the journal, there are fields attached to the log entries that can only be seen when verbose output is turned on. Any displayed extra field can be used to filter the output of a journal query. 
+     This is useful to reduce the output of complex searches for certain events in the journal.
+
+    ==> journalctl -o verbose
+
+11) The timedatectl command shows an overview of the current time-related system settings, including current time, time zone, and NTP synchronization settings of the system.
+
+   ==>  timedatectl
+
+12) Use the timedatectl set-time command to change the system's current time. 
+
+  ==> timedatectl set-time 9:00:00
+
+13) The following server classroom.example.com iburst line in the /etc/chrony.conf file causes the chronyd service to use the classroom.example.com NTP time source.
+        server classroom.example.com iburst
+
+15) After pointing chronyd to the local time source, classroom.example.com, you should restart the service.
+
+        systemctl restart chronyd
+
+16) Use the --since and --until options with the journalctl command to display all the log events recorded in the previous 30 minutes on serverb.
+      journalctl --since 10:00:00 --until 10:30:00
+
+
+
+• The systemd-journald and rsyslog services capture and write log messages to the appropriate files.
+• The /var/log directory contains log files.
+• Periodic rotation of log files prevent them from filling up the file system space.
+• The systemd journals are temporary and do not persist across reboot.
+• The chronyd service helps to synchronize time settings with a time source.
+• The time zone of the server can be updated based on its location.
