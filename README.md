@@ -91,15 +91,7 @@ Locate and accurately interpret logs of system events for troubleshooting purpos
 - Configure the system journal to preserve the record of events when a server is rebooted.
 - Maintain accurate time synchronization using NTP and configure the time zone to ensure correct time stamps for events recorded by the system    journal and logs.
 
- # 14) Analyzing and Storing Logs
- Locate and accurately interpret logs of system events for troubleshooting purposes.
-- Describe the basic logging architecture used by Red Hat Enterprise Linux to record events.
-- Interpret events in relevant syslog files to troubleshoot problems or review system status.
-- Find and interpret entries in the system journal to troubleshoot problems or review system status.
-- Configure the system journal to preserve the record of events when a server is rebooted.
-- Maintain accurate time synchronization using NTP and configure the time zone to ensure correct time stamps for events recorded by the system journal and logs.
-
- # 15) Accessing Linux File Systems
+ # 14) Accessing Linux File Systems
  Access, inspect, and use existing file systems on storage attached to a Linux server.
 - Explain what a block device is, interpret the file names of storage devices, and identify the storage device used by the file system for a particular directory or file.
 - Access file systems by attaching them to a directory in the file system hierarchy.
