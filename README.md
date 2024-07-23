@@ -97,5 +97,10 @@ Locate and accurately interpret logs of system events for troubleshooting purpos
 - Access file systems by attaching them to a directory in the file system hierarchy.
 - Search for files on mounted file systems using the find and locate commands.
 
-
+# 15) Analyzing Servers and Getting Support
+Investigate and resolve issues in the web-based management interface, getting support from
+Red Hat to help solve problems.
+- Activate the Web Console management interface to remotely manage and monitor the performance of a Red Hat Enterprise Linux server.
+- Describe key resources available through the Red Hat Customer Portal, and find information from Red Hat documentation and the Knowledgebase.
+- Analyze servers for issues, remediate or resolve them, and confirm the solution with Red Hat Insights.
 
