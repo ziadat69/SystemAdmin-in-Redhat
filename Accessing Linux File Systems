@@ -1,0 +1,76 @@
+File Systems and Mount Points 
+
+1) The following example displays the file systems and mount points on host.
+    ==> df
+
+2) Show a report on the file systems on the host system with all units converted to human-readable format
+
+   ==> df -h
+
+3) Show a disk usage report in human-readable format for the /usr/share directory on host:
+
+  ===> du -h /var/log
+
+4) Use the lsblk command to list the details of a specified block device or all the available devices.
+
+   ==> lsblk
+
+5) The following example mounts the file system in the /dev/vdb1 partition on the directory /mnt/ data.
+
+    ==> mount /dev/vdb1 /mnt/data
+
+6) The lsblk -fp command lists the full path of the device, along with the UUIDs and mount points,
+    as well as the type of file system in the partition
+
+    ==> lsblk -fp
+
+7) To unmount a file system, the umount command expects the mount point as an argument.
+
+     ==> umount /mnt/data
+
+SEARCHING FOR FILES
+
+8) Search for files with passwd in the name or path in directory trees readable by user on host.
+
+      ==> locate passwd
+
+9) The -i option performs a case-insensitive search. With this option, 
+    all possible combinations of upper and lowercase letters match the search.
+
+    ==> locate -i messages
+
+10)  Search all files in the /var/lib directory that are owned by the chrony user.
+
+   ==> sudo find /var/lib -user chrony
+
+11) List all files in the /var directory that are owned by root and the group owner is mail.
+
+    ==> sudo find /var -user root -group mail
+
+12)  List all files in the /usr/bin directory that has a file size greater than 50 KB.
+  
+    ==>  find /usr/bin -size +50k
+
+ 13) Search all files in the /home/student directory that have not been changed in the last 120 minutes.
+
+     ==> find /home/student -mmin +120
+
+14) List all the block device files in the /dev directory.
+
+     ==>  find /dev -type b
+
+
+
+
+
+
+
+• Storage devices are represented by a special file type called block device.
+• The df command reports total disk space, used disk space, and free disk space on all mounted regular file systems.
+• The mount command allows the root user to manually mount a file system.
+• All processes need to stop accessing the mount point in order to successfully unmount the
+device.
+• The removable storage devices are mounted in the /run/media directory when using the graphical environment.
+• The find command performs a real-time search in the local file systems to find files based on search criteria.
+
+
