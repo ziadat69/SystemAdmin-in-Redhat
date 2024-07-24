@@ -105,4 +105,4 @@ Red Hat to help solve problems.
 - Analyze servers for issues, remediate or resolve them, and confirm the solution with Red Hat Insights.
 
  # 16)  Big Lab 1 about Managing Files from the Command Line 
- # 17)  Big Lab 2 Managing Users and Groups,Permissions and Processes
+ # 17)  Big Lab 2 about Managing Users and Groups,Permissions and Processes
