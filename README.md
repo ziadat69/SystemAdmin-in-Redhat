@@ -104,4 +104,5 @@ Red Hat to help solve problems.
 - Describe key resources available through the Red Hat Customer Portal, and find information from Red Hat documentation and the Knowledgebase.
 - Analyze servers for issues, remediate or resolve them, and confirm the solution with Red Hat Insights.
 
- # 16)  Big Lab in Managing Files from the Command Line 
+ # 16)  Big Lab 1 about Managing Files from the Command Line 
+ # 17)  Big Lab 1 about MANAGING USERS AND GROUPS, PERMISSIONS AND PROCESSES
