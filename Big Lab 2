@@ -1,0 +1,62 @@
+* Terminate the process that is currently using the most CPU time.
+
+  ==> top     type k to kill the process top with PID 137257
+
+* Create a new group called database that has the GID 50000.
+
+   ==> su -     ==> groupadd -g 50000 database
+
+* Create a new user called dbuser1 with group database as one of its secondary groups.
+
+  The user dbuser1 should be able to change its password after 10 days since the last day of the password change. T
+  he password of dbuser1 should expire in 30 days since the last day of the password change.
+
+      ==>  useradd -G database dbuser1
+
+ * Set the initial password of dbuser1 to redhat. Configure the user dbuser1 to force a password change upon first login. 
+
+      ==> passwd dbuser1 
+
+* Configure the user dbuser1 to force a password change upon first login. 
+
+     ==> chage -d 0 dbuser1  
+
+* Use the chage command to set the minimum age of the password of dbuser1 to 10 days.
+
+        ==> chage -m 10 dbuser1
+
+*  Use the chage command to set the maximum age of the password of dbuser1 to 30 days.
+        ==> chage -M 30 dbuser1
+
+*  Configure the user dbuser1 to use sudo to run any command as the superuser.
+
+       ==> vim /etc/sudoers      addd  dbuser1 ALL=(ALL) ALL 
+
+
+* Configure the user dbuser1 to have a default umask of 007.
+
+      su - dbuser1
+
+    ==>   echo "umask 007" >> .bash_profile
+    ==>   echo "umask 007" >> .bashrc
+
+* Create a new directory called /home/student/grading/review2 with student and database as its owning user and group respectively. 
+
+      ==> mkdir /home/student/grading/review2
+      ==>  chown student:database /home/student/grading/review2
+
+
+
+* Configure the permissions on that directory so that any new file in it inherits database as its owning group irrespective to the creating user.
+
+                    chmod g+s /home/student/grading/review2
+
+
+*The permissions on /home/student/grading/review2 should allow the group members of database and the user student to access the directory and
+create contents in it.
+                                 ==> chmod 775 /home/student/grading/review2
+
+*All other users should have read and execute permissions on the directory. Also,
+ensure that the users are only allowed to delete the files, they own, from /home/ student/grading/review2 and not others' files.
+
+                    ==> chmod o+t /home/student/grading/review2
