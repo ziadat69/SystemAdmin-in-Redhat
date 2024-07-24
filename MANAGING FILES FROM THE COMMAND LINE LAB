@@ -1,0 +1,48 @@
+* Create a new directory called /home/student/grading.  
+    ==> mkdir grading
+
+* Create three empty files in the /home/student/grading directory named grade1, grade2, and grade3.  
+      ==> touch grading/grade{1..3} 
+
+
+*   Capture the first five lines of the /home/student/bin/manage-files file in the / home/student/grading/manage-files.txt file. 
+
+      ==>   head -n 5 manage-files.txt > /home/student/grading/manage-files.txt
+
+* Append the last three lines of /home/student/bin/manage-files to the file /home/ student/grading/manage-files.txt. You must not overwrite any text already in the file /home/student/grading/manage-files.txt.  
+
+      ==> tail -n 3 manage-files.txt >>  /home/student/grading/manage-files.txt
+
+* Copy/home/student/grading/manage-files.txtto/home/student/grading/ manage-files-copy.txt.  
+      ==> cp manage-files.txt manage-Copy.txt 
+
+*  Edit the file /home/student/grading/manage-Copy.txt so that there should be two sequential lines of text reading Test JJ ? 
+
+       ==> vim grading/manage-files-copy.txt       copy the line with y       paste it With p           Save the file  with wq
+
+*  Edit the file /home/student/grading/manage-files-copy.txt so that the Test HH line of text must not exist in the file.
+ 
+      ==>    ==> vim grading/manage-files-copy.txt  delete the line the d key   Save the file  with wq
+
+* Create a hard link named /home/student/hardlink to the file /home/student/grading/grade1.
+
+    ==> [student@grading]$ ln grade1 /home/student/hardlink 
+
+
+*   Create a soft link named /home/student/softlink to the file /home/student/grading/grade2.   
+
+   ==> [student@grading]$ ln -s grade2 /home/student/softlink
+
+* Save the output of a command that lists the contents of the /boot directory to the file / home/student/grading/longlisting.txt. The output should be a “long listing” that includes file permissions, 
+  owner and group owner, size, and modification date of each file. 
+
+   ===> ls -l /boot > /home/student/grading/longlisting.txt
+
+
+
+    
+  
+
+
+
+
