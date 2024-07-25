@@ -1,0 +1,60 @@
+• Generate SSH keys for the user student on serverb. Do not protect the private key with
+   a passphrase.
+  ==>   ssh-keygen 
+       Enter file in which to save the key (/home/student/.ssh/id_rsa): /home/ student/.ssh/review3_key : /home/ student/.ssh/review3_key
+
+   ==> ssh-copy-id -i .ssh/review3_key.pub student@servera
+
+  ==> ssh student@servera
+
+
+* On servera, configure the user student to accept logins authenticated by the SSH key pair you created for the user student on serverb. 
+  The user student on serverb should be able to log in to servera using SSH without entering a password.
+
+   ==>  ssh -i .ssh/review3_key student@servera
+
+* • On serverb, configure the sshd service to prevent users from logging in as root via SSH.
+
+          ==> sudo vim /etc/ssh/sshd_config  
+          ==> parameter PermitRootLogin  no           :wq
+     ==> sudo systemctl reload sshd.service
+
+* On serverb, configure the sshd service to prevent users from using their passwords to log in. Users should still be able to authenticate logins using an SSH key pair.
+    
+     ==> sudo vim /etc/ssh/sshd_config 
+     ==>  PasswordAuthentication no               :wq
+        ==> sudo systemctl reload sshd.service
+
+ * Create a tar archive named /tmp/log.tar containing the contents of /var/log
+on server
+
+     ==>  sudo tar -cvf /tmp/log.tar /var/log
+
+ * Remotely transfer the tar archive to the directory /tmp on servera, authenticating as student using /home/student/.ssh/review3_key as the student user’s private key of the SSH key pair for authentication.
+
+  ==>  scp -i .ssh/review3_key /tmp/log.tar student@servera:/tmp
+
+
+
+* Configure the rsyslog service on serverb to log all messages it receives that have the priority level of debug or higher to the file /var/log/grading-debug. 
+This configuration should be set in an /etc/rsyslog.d/grading-debug.conf file which you should create.
+
+       ==> sudo vim /etc/rsyslog.d/grading-debug.conf          wirte     *.debug /var/log/grading-debug     :wq
+
+      ==> sudo systemctl restart rsyslog.service
+
+*|Install the zsh package, available in the BaseOS repository, on serverb.
+
+       ==>   sudo yum install -y zsh
+
+* Enable the default module stream for the module python36 and install all provided
+  packages from that stream on serverb.
+
+        ==> sudo yum module install -y python36
+
+* Set the time zone of serverb to Asia/Kolkata.
+
+        ==> sudo timedatectl set-timezone Asia/Kolkata
+
+
+ 
