@@ -45,12 +45,12 @@ This configuration should be set in an /etc/rsyslog.d/grading-debug.conf file wh
 
 *|Install the zsh package, available in the BaseOS repository, on serverb.
 
-       ==>   sudo yum install -y zsh
+       ==>   sudo yum install zsh -y
 
 * Enable the default module stream for the module python36 and install all provided
   packages from that stream on serverb.
 
-        ==> sudo yum module install -y python36
+        ==> sudo yum module install python36 -y
 
 * Set the time zone of serverb to Asia/Kolkata.
 
