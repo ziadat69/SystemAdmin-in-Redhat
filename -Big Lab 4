@@ -1,0 +1,33 @@
+* Determine the name of the Ethernet interface and its active connection profile 
+
+ ==> nmcli device status
+
+* create a new connection profile called static for the available Ethernet 
+   interface that statically sets network settings and does not use DHCP
+
+
+	==> nmcli connection add con-name static type ethernet \
+      ifname ens3 ipv4.addresses '192.35.22.11/24' ipv4.gateway '192.35.22.254' \
+      ipv4.dns '192.35.22.254' ipv4.method manual
+
+  ==> nmcli connection up static
+
+On serverb, edit the /etc/hosts file to set client-review4 as the canonical host name for the IPv4 address 
+   192.35.22.11 of the hostziadat69.com.
+
+
+   ===> sudo vim /etc/hosts 
+     192.35.22.11/24 ziadat69.com  client-review4
+
+
+* Use the ping command to verify that you can reach  192.35.22.11 using the canonical host name client-review4. 
+
+    ==> ping -c4 client-review4
+
+* Use the nmcli command to add the new IP address.
+
+     ==> sudo nmcli connection modify static +ipv4.addresses ' 192.35.22.88/24'
+
+* Use the nmcli command to activate the new IP address.
+
+    ==sudo nmcli connection up static
