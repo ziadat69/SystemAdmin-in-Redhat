@@ -1,0 +1,13 @@
+** a block device containing the XFS file system exists but is not yet mounted.
+Determine the block device and mount it on the /review5-disk directory. Create the / review5-disk directory, if necessary.
+
+
+==> sudo mkdir  /review5-disk
+==> lsblk -fs
+
+==> mount uuid= "3d97c5ef-23e7-4c1c-a9be-d5c475b3d0d5" /review5-disk
+
+
+**locate the file named review5-path. Record its absolute path in the / review5-disk/review5-path.txt text file
+
+==>  find  /  name review5-disk/review5-path.txt
