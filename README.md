@@ -108,5 +108,5 @@ Red Hat to help solve problems.
  ### 16)  Big Lab 1 about Managing Files from the Command Line 
  ### 17)  Big Lab 2 about Managing Users and Groups,Permissions and Processes
  ### 18)  Big Lab 3 about Configuring and Managing a Server
- ### 19)  Big Lab 3 about Managing Networks
+ ### 19)  Big Lab 4 about Managing Networks
  
